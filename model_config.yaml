@@ -1,0 +1,28 @@
+model:
+  name: "zero_day_anomaly_detector"
+  type: "isolation_forest"
+  parameters:
+    n_estimators: 100
+    contamination: 0.1
+    random_state: 42
+    max_features: 1.0
+    bootstrap: false
+
+training:
+  test_size: 0.2
+  cross_validation: true
+  cv_folds: 5
+
+features:
+  numerical:
+    - "packet_size"
+    - "duration"
+    - "frequency"
+  categorical:
+    - "protocol"
+    - "source_ip"
+    - "destination_ip"
+
+thresholds:
+  anomaly_score: 0.7
+  confidence_level: 0.95

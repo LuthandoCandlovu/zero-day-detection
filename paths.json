@@ -1,0 +1,8 @@
+{
+  "raw_data": "data/raw/network_traffic.csv",
+  "processed_data": "data/processed/cleaned_network_data.pkl",
+  "model_artifacts": "data/models/",
+  "logs": "logs/",
+  "reports": "reports/",
+  "temp": "temp/"
+}
